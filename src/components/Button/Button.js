@@ -6,7 +6,7 @@ import Styles from "./Styles";
 export default function Button({ setTextSearch, text }) {
     function onButton() {
         if (cnpj.isValid(text)) {
-            setTextSearch(text)
+            setTextSearch(text);
         } else {
             Alert.alert("Por favor informe um CNPJ válido!")
         };

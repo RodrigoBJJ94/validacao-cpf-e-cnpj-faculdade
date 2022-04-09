@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View } from "react-native";
+import Statusbar from "./components/Statusbar/Statusbar";
 import Title from "./components/Title/Title";
 import Input from "./components/Input/Input";
 import Button from "./components/Button/Button";
@@ -13,6 +14,7 @@ export default function App() {
 
   return (
     <View style={Styles.app}>
+      <Statusbar />
       <Title />
       <Input value={text} setText={(search) => setText(search)} />
       <Button setTextSearch={setTextSearch} text={text} />
