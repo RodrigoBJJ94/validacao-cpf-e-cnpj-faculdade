@@ -8,10 +8,12 @@ export default StyleSheet.create({
     button: {
         backgroundColor: "#d3494e",
         padding: 15,
-         borderRadius: 4
+        borderRadius: 4,
+        width: 180,
     },
     textButton: {
         fontSize: 20,
-        color: "#000000"
+        color: "#000000",
+        textAlign: "center"
     }
 });
