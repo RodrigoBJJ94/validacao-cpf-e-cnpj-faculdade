@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
-import Input from "./Input";
-import Button from "./Button";
+import { View } from "react-native";
+import Title from "./components/Title/Title";
+import Input from "./components/Input/Input";
+import Button from "./components/Button/Button";
+import Data from "./components/Data/Data";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -32,23 +34,10 @@ export default function App() {
 
   return (
     <View>
-      <Text>Validação de CNPJ e CPF</Text>
-      <Text>CNPJ</Text>
+      <Title />
       <Input value={text} setText={(search) => setText(search)} />
       <Button setTextSearch={setTextSearch} text={text} />
-      <View>
-        {data && (
-          <View>
-            <Text>Situação do CNPJ: {data.situacao}</Text>
-            <Text>Razão Social: {data.nome}</Text>
-            <Text>Nome Fantasia: {data.fantasia}</Text>
-            <Text>{`Endereço: ${data.logradouro} ${data.numero}`}</Text>
-            <Text>Bairro: {data.bairro}</Text>
-            <Text>Cidade: {data.municipio}</Text>
-            <Text>CEP: {data.cep}</Text>
-          </View>
-        )}
-      </View>
+      <Data data={data} />
     </View>
   );
 };
