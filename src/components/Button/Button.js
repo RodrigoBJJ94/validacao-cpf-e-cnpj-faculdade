@@ -1,12 +1,13 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
+import Styles from "./Styles";
 
 export default function Button({ setTextSearch, text }) {
     return (
-        <View>
-            <TouchableOpacity
+        <View style={Styles.viewButton}>
+            <TouchableOpacity style={Styles.button}
                 onPress={() => setTextSearch(text)}>
-                <Text>Consultar CNPJ</Text>
+                <Text style={Styles.textButton}>Consultar CNPJ</Text>
             </TouchableOpacity>
         </View>
     );
